@@ -11,9 +11,10 @@ System.out.println("MULTIPLY: " + Calculator.multiply(2,2));
 System.out.println("DIVIDE: " + Calculator.divide(2,2));
 System.out.println("MODULUS: " + Calculator.modulus(2,2));
 
+}
+
 //add class 
 
- }
 
 class Calculator {
 
