@@ -1,27 +1,19 @@
-//can use launcher here instead
-//if so add code below outside of main method
-//create array variable
-//create new object of ArrayChecker class using
-//inputArray as param
-//call ArrayChecker methods (make sure to compile both files)
-
-
-
-
 public class Arrays {
 
 public static void main(String[] args) {
-
- int[] inputArray = {123,55,55,123};
- ArrayChecker myArrayChecker = new ArrayChecker();
- if (myArrayChecker.isSymmetrical(inputArray)) {
-   System.out.println("Yes, it's symmetrical");
- }
- //else {
-   //System.out.println(myArrayChecker.reverse());
- //}
-
-
+  int[] inputArray = {1,1,1,1,1,1,1,2};
+  ArrayChecker myArrayChecker = new ArrayChecker();
+    System.out.println(myArrayChecker.isSymmetrical(inputArray));
+    if (! myArrayChecker.isSymmetrical(inputArray)){
+      int[] result = myArrayChecker.reverse(inputArray);
+      for (int i = 0; i < result.length; i++) {
+        System.out.println(result[i] +" ");
+      }
+    }
+  }
 }
 
-}
+//note we cannot simply print System.out.println(myArrayChecker.reverse(inputArray))
+//because this will just give us the int[]'s location in memory
+//and not the numbers in the array
+//instead we print one by one

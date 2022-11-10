@@ -1,37 +1,28 @@
-//don't actually need a constructor here, but we can do it this way
-//public constructor to create new instance of AC. 
-//private int[] x;
-//ArrayChecker(int[] x){
-//this.x = x;
-//}
+public class ArrayChecker {
 
-//first try a method to get the character at position x
-// myArray[myArray.length - 1]
+ public boolean isSymmetrical(int [] x){
+   for (int i = 0; i < x.length / 2; i++) { 
+   // we divide by two to only check position 0 with length-1
+   // this removes the need to check length-1 against 0 (better code)
+     if (x[0]  != x[x.length-1-i]) {
+     return false;
+     }
+   }
+   return true;
+ }
 
+ public int[] reverse(int [] x){
+   //for arrays, we must first create them  using 'new'
+   //and then specify length so we can assign memory
+   int [] newArray = new int[x.length]; 
+     for (int i = 0; i < x.length; i++) {
+       //add whatever is at length-i to x at position i
+       newArray[x.length-1-i] = x[i];
+     }
+     return newArray;
+ }
 
-//public boolean isSymmetrical() {
-  //if (this.x[0] == this.x[this.x.length-1]) {
- 
-
-public class ArrayChecker{
-
-public boolean isSymmetrical(int [] x){
-  if (x[0] == x[x.length-1]){
-  return true;
-  }
-  else {
-  return false;
-  }
 }
-
-
-//public String reverse(){
-//int updatedString = 
-//return ;
-//}
-
-
-} //close ArrayChecker
 
 
 
