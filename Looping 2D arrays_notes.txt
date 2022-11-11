@@ -1,0 +1,34 @@
+int[a][b]
+
+int[2][3]
+
+
+0 > {1, 1, 1}
+1 > {1, 1, 1}
+     ^  ^  ^ 
+     0  1  2
+
+row = 1
+col = 3
+
+matrix.length = 2
+matrix[ row = 1].length = 3
+
+int[0][0] = 1
+int[0][1] = 1
+int[0][2] = 1
+int[1][0] = 1
+int[1][1] = 1
+int[1][2] = 1
+
+//code for looping through 2D arrays
+
+    for (int row = 0; row < myMatrix.length; row++){
+      for (int col = 0; col < myMatrix[row].length; col++){
+        myMatrix[row][col] = 1;
+
+//code for testing looping with print
+
+  for (int row = 0; row < myMatrix.length; row++){
+       for (int col = 0; col < myMatrix[row].length; col++){
+         System.out.println(myMatrix[row][col]);
