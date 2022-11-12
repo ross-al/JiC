@@ -16,24 +16,26 @@ public int[][] matrix;
        matrix[x][y] = z;
     }
   }
- 
-  public void setRow(int q, String s){
-   if (matrix.length >= q){
-     if (s.length() == matrix[q].length){
-       for (int i = 0; i < s.length(); i++){
-         matrix[q][i] = Integer.parseInt(s.substring(i,i+1));
-       }
-     }
-   }
 
-  //takes int as row number
-  //takes string as numbers "1,2,3" and then overrides
-  //elements in the row 
-  //must check index is valid
-  //must check numbers are correct
-  // e.g. if 3 cols, then need 3 numbers
-  //if anything incorrect, then do nothing
+  public void setRow(int q, String s){ 
+    if (matrix.length >= q){
+      if (s.length() == matrix[q].length){
+        for (int i = 0; i < s.length(); i++){
+          matrix[q][i] = Integer.parseInt(s.substring(i,i+1));
+        } 
+      }
+    }
+  }
 
+
+  public void setColumn(int k, String s){ //2 //123
+    if (matrix[0].length >= k){
+      if (s.length() == matrix.length){
+        for (int i = 0; i < s.length(); i++){
+          matrix[i][k] = Integer.parseInt(s.substring(i,i+1));
+        }
+      }  
+    }
   }
 
 

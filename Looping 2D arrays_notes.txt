@@ -1,17 +1,18 @@
 int[a][b]
 
-int[2][3]
+int[3][3]
 
 
 0 > {1, 1, 1}
 1 > {1, 1, 1}
+2 > {1, 1, 1}
      ^  ^  ^ 
      0  1  2
 
 row = 1
 col = 3
 
-matrix.length = 2
+matrix.length = 3
 matrix[ row = 1].length = 3
 
 int[0][0] = 1
