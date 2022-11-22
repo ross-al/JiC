@@ -16,7 +16,7 @@ public class Patient {
         if (nextPatient == null) {
             nextPatient = myPatient;
         } else {
-            nextPatient.addPatient(myPatient); //stackoverflow here!
+            nextPatient.addPatient(myPatient); 
         }
     }
 
