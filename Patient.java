@@ -4,6 +4,9 @@ public class Patient {
     private String illness;
     private Patient nextPatient;
 
+    public Patient(String name){ //for simple Patient ojbects
+        this.name = name;
+    }
 
     public Patient(String name, int age, String illness) {
         this.name = name;
