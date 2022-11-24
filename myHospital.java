@@ -38,7 +38,7 @@ public class myHospital {
         myList.deletePatient("Hugh");
         myList.deletePatient("Seb");
 
-        current = myList; //need to reinitialise 
+        current = myList; //need to reinitialise
         while (current.getNextPatient() != null) {
             System.out.println(current.getName() + ", " + current.getAge() + ", " + current.getIllness());
             current = current.getNextPatient();
