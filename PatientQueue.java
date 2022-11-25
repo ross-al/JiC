@@ -5,7 +5,7 @@ public interface PatientQueue {
 	* 
 	* @param patient will be added to the queue, may be null
 	*/
-	void insert(String name); //make sure naming convention is the same as class
+	void enqueue(String name); //make sure naming convention is the same as class
 	// also make sure return type is same, i.e. Patient here
 	
 	/** 
@@ -13,10 +13,12 @@ public interface PatientQueue {
 	* 
 	* @return the patient just removed from the queue, may be null
 	*/
-	String retrieve(); //make sure naming convention is the same as class
+	String dequeue(); //make sure naming convention is the same as class
 	// also make sure return type is same, i.e. Patient here
-
-	String getPatientName();
 	
+
+	int getQueueSize();
+	void displayQueue();
+
 }
 

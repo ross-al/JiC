@@ -8,38 +8,55 @@ public class PointerBasedQueue implements PatientQueue {
     //first we create a variable of type SimplePatient
     //this will be our queue
 
-    private SimplePatient head; //implement as stack for now
+    private SimplePatient frontOfQueue; //implemented as stack for now
+    private SimplePatient rearOfQueue;
+    private int queueSize;
 
-    //this creates an empty queue
+    //constructor
     public PointerBasedQueue() {
-        head = null;
+        frontOfQueue = null; //of type SimplePatient
+        rearOfQueue = null;
+        queueSize = 0;
     }
 
-    public void insert(String name) { //this is a stack not queue
-        SimplePatient newPatient = new SimplePatient(name);
-        newPatient.setNextPatient(head);
-        head = newPatient;
-
-        //need a pointer to next Patient in queue
-        //need to remeber the last pointer so we don't lose the space in memory
-        //then set newPatient to old pointer
-        //rest of code here
-        //can we just use Patient.java to do all this? No because PointerBasedQueue is a diff type
+    public int getQueueSize() {
+        return queueSize;
     }
-
-    public String retrieve() { //this is a stack not queue
-        if (head == null) {
-            return null;
+    
+    public void displayQueue(){
+        SimplePatient currentPatient = frontOfQueue;
+        while (currentPatient != null){
+            String name = currentPatient.getName();
+            System.out.println(name);
+            currentPatient = currentPatient.getNextPatient();
         }
-        String result = head.getName();
-        head = head.getNextPatient();
-        return result;
     }
 
-    public String getPatientName() {
-        String result = head.getName();
-        return result;
+    public void enqueue(String name) {
+        if(frontOfQueue == null){
+            rearOfQueue = new SimplePatient(name);
+            frontOfQueue = rearOfQueue;
+        }else {
+            SimplePatient newPatient = new SimplePatient(name);
+            rearOfQueue.setNextPatient(newPatient);
+            rearOfQueue = rearOfQueue.getNextPatient();
+        }
+        queueSize++;
+        System.out.println("Patient " + name + " was added to the queue");
+        System.out.println();
     }
 
-
+    //Remove item from the front of the queue.
+    public String dequeue() {
+        if(frontOfQueue != null){
+            String name = frontOfQueue.getName();
+            frontOfQueue = frontOfQueue.getNextPatient();
+            queueSize--;
+            return name;
+        }
+        return null;
+    }
+    
 }
+
+
