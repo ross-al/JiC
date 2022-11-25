@@ -22,10 +22,10 @@ public class PointerBasedQueue implements PatientQueue {
     public int getQueueSize() {
         return queueSize;
     }
-    
-    public void displayQueue(){
+
+    public void displayQueue() {
         SimplePatient currentPatient = frontOfQueue;
-        while (currentPatient != null){
+        while (currentPatient != null) {
             String name = currentPatient.getName();
             System.out.println(name);
             currentPatient = currentPatient.getNextPatient();
@@ -33,10 +33,10 @@ public class PointerBasedQueue implements PatientQueue {
     }
 
     public void enqueue(String name) {
-        if(frontOfQueue == null){
+        if (frontOfQueue == null) {
             rearOfQueue = new SimplePatient(name);
             frontOfQueue = rearOfQueue;
-        }else {
+        } else {
             SimplePatient newPatient = new SimplePatient(name);
             rearOfQueue.setNextPatient(newPatient);
             rearOfQueue = rearOfQueue.getNextPatient();
@@ -48,7 +48,7 @@ public class PointerBasedQueue implements PatientQueue {
 
     //Remove item from the front of the queue.
     public String dequeue() {
-        if(frontOfQueue != null){
+        if (frontOfQueue != null) {
             String name = frontOfQueue.getName();
             frontOfQueue = frontOfQueue.getNextPatient();
             queueSize--;
@@ -56,7 +56,7 @@ public class PointerBasedQueue implements PatientQueue {
         }
         return null;
     }
-    
+
 }
 
 

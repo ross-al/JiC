@@ -20,7 +20,7 @@ public class Clinic {
 
     private void launch() {
 
-        
+
         System.out.println();
         System.out.println("Hello and welcome to Ross's Clinic. Please select one of the following options:");
         System.out.println();
@@ -45,7 +45,7 @@ public class Clinic {
                     break;
                 case 2:
                     System.out.println();
-                    System.out.println("Patient " +  patientQueue.dequeue() + " has left the queue");
+                    System.out.println("Patient " + patientQueue.dequeue() + " has left the queue");
                     System.out.println("Patients in the queue:" + patientQueue.getQueueSize());
                     System.out.println();
                     break;
