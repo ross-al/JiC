@@ -7,9 +7,11 @@ public class IntegerToStringMap implements SimpleMap {
 
     //constructor
     public IntegerToStringMap() {
+        key = 0; //is this the compile problem?
         name = "";
         nextKey = null;
         mapSize = 0;
+
     }
 
     public void put(int key, String name) {
