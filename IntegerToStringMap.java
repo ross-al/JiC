@@ -7,19 +7,20 @@ public class IntegerToStringMap implements SimpleMap {
 
     //constructor
     public IntegerToStringMap() {
-        key = 0; //is this the compile problem?
+        //key = 0; //is this the compile problem?
         name = "";
         nextKey = null;
         mapSize = 0;
 
     }
 
+    //lots wrong here...
     public void put(int key, String name) {
-        if (nextKey == null) {
-            nextKey.key = key;
-            nextKey.name = name;
+        if (this.key != key) {
+            this.key = key;
+            this.name = name;
         } else {
-            nextKey.nextKey.put(key, name);
+            nextKey.put(key, name);
         }
         mapSize++;
     }
