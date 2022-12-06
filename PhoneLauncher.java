@@ -1,4 +1,5 @@
-public class PhoneLauncher extends SmartPhone {
+public class PhoneLauncher {
+
 
     public static void main(String[] args) {
         PhoneLauncher launcher = new PhoneLauncher();
@@ -6,7 +7,7 @@ public class PhoneLauncher extends SmartPhone {
     }
 
     public void launch() {
-        SmartPhone myPhone = new SmartPhone(); //need to make sure we create the right type based on the methods we call
+        SmartPhone myPhone = new SmartPhone("ACME"); //need to make sure we create the right type based on the methods we call
         myPhone.call("07964663940");
         myPhone.call("07964663941");
         myPhone.call("07964663942");

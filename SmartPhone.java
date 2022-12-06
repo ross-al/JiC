@@ -1,4 +1,9 @@
 public class SmartPhone extends MobilePhone{
+	private String name;
+
+	public SmartPhone(String name){
+		this.name = name;
+	}
 
 	public void browseWeb(String url){
 		System.out.println("Browsing "+url+"...");
