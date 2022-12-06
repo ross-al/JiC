@@ -27,6 +27,7 @@ public class PhoneLauncher {
         myPhone.findPosition();
         myPhone.printLastNumbers();
         System.out.println("Number of saved numbers: " +myPhone.getCallHistorySize());
+		System.out.println(myPhone.getBrandName());
 
     }
 }

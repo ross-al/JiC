@@ -1,8 +1,12 @@
 public class SmartPhone extends MobilePhone{
-	private String name;
+	private String brandName;
 
-	public SmartPhone(String name){
-		this.name = name;
+	public SmartPhone(String brandName){
+		this.brandName = brandName;
+	}
+	
+	public String getBrandName(){
+		return brandName;
 	}
 
 	public void browseWeb(String url){
