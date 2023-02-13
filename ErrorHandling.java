@@ -1,4 +1,5 @@
 public class ErrorHandling{
+	
 	public static void main(String[] args){
 		ErrorHandling er = new ErrorHandling();
 		er.launch();
