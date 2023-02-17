@@ -19,10 +19,10 @@ public class ExpressionDriver {
 		System.out.println(plusExp.toString());
 		System.out.println(timesExp.toString());
 		System.out.println(timeExp2.toString());
-		//e.g. ((2 + 3) * 4)
-		// so left 2
-		//right 3
-		//left 2 + 3
-		//right 4
+		
+		Expression divExp = new DivisionExpression(intExp3, intExp1);
+		System.out.println(divExp.toString() + " = " + divExp.value());
+		
+	
     }
 }
